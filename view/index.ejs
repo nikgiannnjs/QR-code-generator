@@ -1,1 +1,31 @@
-<h1>Hello mothafucka!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="generator">
+      <h1>Qr Code Generator</h1>
+      <hr />
+      <form action="/scan" method="POST" class="form">
+        <textarea
+          name="text"
+          id="text"
+          cols="150"
+          rows="10"
+          placeholder="Enter URL or text"
+        >
+        </textarea>
+        <button type="submit" class="btn btn-primary">Generate QR Code</button>
+      </form>
+    </div>
+  </body>
+</html>

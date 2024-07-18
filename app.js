@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const ejs = require("ejs");
 const path = require("path");
+const qrcode = require("qrcode");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
