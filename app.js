@@ -14,4 +14,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.post("/scan", (req, res) => {
+  const inputText = req.body.text;
+  qrcode.toDataURL(inputText, (err, src) => {
+    res.render("scan", {
+      qr_code: src,
+    });
+  });
+});
+
 module.exports = app;
